@@ -1,0 +1,48 @@
+{
+	"name": "gitweb",
+	"displayName": "SimpleSVN",
+	"description": "Bare bones SVN",
+	"keywords": [
+		"Source Control",
+		"SCM",
+		"Repository",
+		"SVN"
+	],
+	"icon": "icon.png",
+	"version": "0.1.1",
+	"publisher": "isopodlabs",
+	"repository": "https://github.com/adrianstephens/vscode-svn",
+	"files": [
+		"out/**/*.js",
+		"icon.png",
+		"LICENSE.txt"
+	],
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"categories": [
+		"SCM Providers",
+		"Other"
+	],
+	"activationEvents": [
+		"workspaceContains:.svn"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint \"src/**/*.ts\"",
+		"watch": "tsc -watch -p ./",
+		"publish": "vsce publish patch"
+	},
+	"devDependencies": {
+		"@types/node": "^18",
+		"@types/vscode": "^1.73.0",
+		"@typescript-eslint/eslint-plugin": "^7.14.0",
+		"@typescript-eslint/parser": "^7.14.0",
+		"eslint": "^8.26.0",
+		"ts-loader": "^9.5.1"
+	}
+}
